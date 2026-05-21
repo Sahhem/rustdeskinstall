@@ -304,11 +304,11 @@ echo "$string64rev"
 
 function setuphttp () {
     # Create windows install script
-    wget https://raw.githubusercontent.com/dinger1986/rustdeskinstall/master/WindowsAgentAIOInstall.ps1
+    wget https://raw.githubusercontent.com/techahold/rustdeskinstall/master/WindowsAgentAIOInstall.ps1
     $SUDO sed -i "s|secure-string|${string64rev}|g" WindowsAgentAIOInstall.ps1
 
     # Create linux install script
-    wget https://raw.githubusercontent.com/dinger1986/rustdeskinstall/master/linuxclientinstall.sh
+    wget https://raw.githubusercontent.com/techahold/rustdeskinstall/master/linuxclientinstall.sh
     $SUDO sed -i "s|secure-string|${string64rev}|g" linuxclientinstall.sh
 
     # Download and install gohttpserver
